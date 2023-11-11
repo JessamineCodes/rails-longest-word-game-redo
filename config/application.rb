@@ -35,5 +35,11 @@ module RailsLongestWordGameRedo
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # ADDED BY ME FOR PERSISTING USER SCORE BETWEEN ROUNDS:
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+
+
   end
 end

@@ -1,5 +1,9 @@
 <h1>New game</h1>
-<div><%= @letters %></div>
+<ul class="inline-list">
+  <% @letters.each do |letter| %>
+  <li> <%= letter %> </li>
+  <% end %>
+</ul>
 
 <form action="/score" method="post" data-turbo="false">
   <!-- ... -->
