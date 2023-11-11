@@ -7,4 +7,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "new", to: "games#new"
+  # don't need a get in order to create a page to redirect to when post-ing,
+  # but won't be able to get to it with a straight get request, ie by typing in link
+  post "score", to: "games#score"
 end
